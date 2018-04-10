@@ -12,6 +12,9 @@
 ### 4. 创建终端下的快速启动命令
     sudo ln -s /opt/electronic-wechat-linux-x64/electronic-wechat /usr/bin/electronic-wechat
 ### 5. 创建快捷方式
+    sudo gedit  /usr/share/applications/wechat.desktop
+文本输入：<br>
+
     [Desktop Entry]
     Encoding=UTF-8
     Version=1.0
