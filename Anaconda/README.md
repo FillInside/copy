@@ -1,4 +1,4 @@
-## Linux下安装Anaconda
+## Titan服务器上安装Anaconda
 ### 1. 清华镜像下载Anaconda（下载.sh文件）
      https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
 ### 2. 将.sh文件传入Titan服务器
