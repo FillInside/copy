@@ -54,11 +54,11 @@ def _read_and_decode(filename_queue, image_dim=28, distort=False, split='train')
                                             random.uniform(-0.26179938779, 0.26179938779))
             image = tf.reshape(image, [cropped_dim, cropped_dim, 1])
             image.set_shape([cropped_dim, cropped_dim, 1])
-         else:
+        else:
             fraction = cropped_dim / image_dim
             image = tf.image.central_crop(image, central_fraction=fraction)
             image.set_shape([cropped_dim, cropped_dim, 1])
-         image_dim = cropped_dim
+        image_dim = cropped_dim
 
     # Convert label from a scalar uint8 tensor to an int32 scalar.
     label = tf.cast(features['label'], tf.int32)
