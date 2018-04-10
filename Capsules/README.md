@@ -1,6 +1,6 @@
 # Code
 Capsule的代码集合
-# Paper
+# Papers
 Capsule的论文集合
 # capsule.tar.gz
 Sarasara的Capsule代码打包，原文地址：https://github.com/FillInside/models/tree/master/research/capsules <br>
