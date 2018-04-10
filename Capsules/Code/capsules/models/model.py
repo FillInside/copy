@@ -149,7 +149,7 @@ class Model(object):
         tower_grads = []
         inferred = []
         with tf.variable_scope(tf.get_variable_scope()):
-            for i in xrange(num_gpus):
+            for i in range(num_gpus):
                 tower_output = self._single_tower(i, features[i])
                 inferred.append(tower_output.inferred)
                 almosts.append(tower_output.almost)
