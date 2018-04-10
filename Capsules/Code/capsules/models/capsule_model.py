@@ -114,7 +114,7 @@ class CapsuleModel(model.Model):
             targets.append((features['spare_label'], features['spare_image']))
 
         with tf.name_scope('recons'):
-            for i in xrange(features['num_targets']):
+            for i in range(features['num_targets']):
                 label, image = targets[i]
                 remakes.append(
                     layers.reconstruction(
