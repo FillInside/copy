@@ -7,12 +7,13 @@
 直接解压就行，或者命令行：<br>
     
     sudo tar zxvf linux-x64.tar.gz
-### 3. 把解压的文件夹放在/opt下
-    sudo mv electronic-wechat-linux-x64/ /opt/electronic-wechat-linux-x64
+### 3. 把解压的文件夹及图标放在/opt下
+    sudo mv .../electronic-wechat-linux-x64 /opt/electronic-wechat-linux-x64
+    sudo mv .../icon.jpg /opt/electronic-wechat-linux-x64
 ### 4. 创建终端下的快速启动命令
     sudo ln -s /opt/electronic-wechat-linux-x64/electronic-wechat /usr/bin/electronic-wechat
 ### 5. 创建快捷方式
-    sudo gedit  /usr/share/applications/wechat.desktop
+    sudo vim /usr/share/applications/wechat.desktop
 文本输入：<br>
 
     [Desktop Entry]
@@ -20,9 +21,10 @@
     Version=1.0
     Type=Application
     Name=Electronic WeChat
-    Icon=electronic-wechat.png
+    Icon=/opt/electronic-wechat-linux-x64/icon.png
     Exec=/opt/electronic-wechat-linux-x64/electronic-wechat
     StartupNotify=false
     StartupWMClass=electronic-wechat
     OnlyShowIn=Unity;
     X-UnityGenerated=true
+按ESC，输入:wq即可保存退出
