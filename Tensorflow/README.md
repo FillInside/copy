@@ -23,7 +23,7 @@
     >>>c = tf.matmul(a, b)
     >>>sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
     >>>print(sess.run(c))
-若看到输出有“GPU:0”等，则表示所装Tensorflow微GPU版<br>
+若看到输出有“GPU:0”等，则表示所装Tensorflow是GPU版<br>
 ### 7.参考
     https://www.cnblogs.com/willnote/p/6746499.html
     https://www.zhihu.com/question/263850405
