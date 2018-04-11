@@ -29,7 +29,7 @@ class ConvModel(model.Model):
         Returns:
             A 4D tensor as the output of the last pooling layer.
         """
-        for i in xrange(1, len(channels)):
+        for i in range(1, len(channels)):
             with tf.variable_scope('conv{}'.format(i)) as scope:
                 kernel = variables.weight_variable(
                     shape=[5, 5, channels[i - 1], channels[i]], stddev=5e-2,
