@@ -13,3 +13,17 @@
 使用最后一行的提示命令进行安装：<br>
 
     conda install --channel https://conda.anaconda.org/jjh_cio_testing tensorflow-gpu
+### 6.查看Tensorflow是否为GPU版本
+直接session.run运行个a+b的运算，会有设备初始化的提示<br>
+    
+    $python
+    >>>import tensorflow as tf
+    >>>a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+    >>>b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+    >>>c = tf.matmul(a, b)
+    >>>sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+    >>>print(sess.run(c))
+若看到输出有“GPU:0”等，则表示所装Tensorflow微GPU版<br>
+### 7.参考
+    https://www.cnblogs.com/willnote/p/6746499.html
+    https://www.zhihu.com/question/263850405
